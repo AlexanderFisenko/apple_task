@@ -1,0 +1,7 @@
+<% if @device.warranty_expiration_date %>
+  <% if @device.expired? %>
+    <span title="<%= @device.warranty_expiration_date_known? ? @device.warranty_expiration_date : '' %>">Out of Warranty</span>
+  <% else %>
+    <span title="<%= @device.warranty_expiration_date %>">In Warranty</span>
+  <% end %>
+<% end %>
